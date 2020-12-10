@@ -1,0 +1,172 @@
+/* I used this code for the registration and login page and the design I got inspired and help from some online reasources */
+
+
+.container.login {
+    background: #f2f2f2;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* For the form container to make it look better */
+.container.login .center {
+    width: 400px;
+    margin: 80px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+
+.center form {
+    padding: 0 40px;
+}
+
+form .text-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.text-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* For the transform -50 to make above the input fied so when the user click on the filed the text will move above 
+With some transation */
+
+.text-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+
+.text-field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3b5dcc;
+    transition: 0.5s
+}
+
+.text-field input:focus~label,
+.text-field input:valid~label {
+    top: -5px;
+    color: #3b5dcc;
+}
+
+.checkbox-field>label {
+    padding: 7px;
+    font-weight: bold;
+    color: #3b5dcc;
+}
+
+.checkbox {
+    /* margin: 30px 0; */
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.checkbox label {
+    color: #999;
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* To remove the boxes of the checkbox */
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox input[type="checkbox"]:checked+label {
+    background: #3b5dcc;
+    color: #fff;
+}
+
+
+/* Design for the Subscription checkbox */
+.sub-field {
+    margin: 10px 0px
+}
+
+.sub-field label {
+    padding: 3px;
+    color: #3b5dcc;
+}
+
+.text-field input:focus~span::before,
+.text-field input:valid~span::before {
+    width: 100%;
+}
+
+.pass {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover {
+    color: #3b5dcc;
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #3b5dcc;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    border-color: #3b5dcc;
+    transition: 0.5s;
+}
+
+.signup_link {
+    margin: 30px 0px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.signup_link a {
+    color: #3b5dcc;
+    text-decoration: none;
+}
+
+.signup_link a:hover {
+    text-decoration: underline;
+}
