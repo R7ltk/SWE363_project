@@ -13,12 +13,23 @@
 }
 
 /* For the form container to make it look better */
-.container.login .center {
+.container.login .center,
+.container.update-profile .center {
     width: 400px;
     margin: 80px;
     background: #fff;
     border-radius: 10px;
 }
+
+.container.update-profile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
 
 .center h1 {
     text-align: center;
@@ -60,6 +71,15 @@ With some transation */
     pointer-events: none;
     transition: 0.5s;
 }
+
+/* .update-profile .text-field label {
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+} */
 
 
 .text-field span::before {
